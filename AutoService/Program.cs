@@ -17,6 +17,7 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddDefaultIdentity<IdentityUser>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
+builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
 
 var app = builder.Build();
@@ -40,6 +41,12 @@ app.UseRouting();
 
 app.UseAuthorization();
 
-app.MapRazorPages();
-
+/*app.MapRazorPages();*/
+app.UseEndpoints(endPoints =>
+{
+    endPoints.MapControllerRoute(
+        name: "default",
+        pattern: "{controller=Home}/{action=Index}/{id?}");
+    endPoints.MapRazorPages();
+});
 app.Run();

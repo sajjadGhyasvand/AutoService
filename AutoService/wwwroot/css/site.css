@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'Shahab';
+    src: url('//cdn.font-store.ir/fonts/shahab/Shahab-Regular.woff2') format('woff2'), url('//cdn.font-store.ir/fonts/shahab/Shahab-Regular.woff') format('woff'), url('//cdn.font-store.ir/fonts/shahab/Shahab-Regular.ttf') format('truetype'), url('//cdn.font-store.ir/fonts/shahab/Shahab-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+p,span,h1,h2,h3,button,a{
+    font-family:'Shahab' !important;
+}
+
 html {
   font-size: 14px;
 }

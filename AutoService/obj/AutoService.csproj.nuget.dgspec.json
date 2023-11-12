@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\S.Ghiasvand\\source\\repos\\AutoService\\AutoService\\AutoService.csproj": {}
+    "C:\\Users\\S.Ghiasvand\\Source\\Repos\\AutoService\\AutoService\\AutoService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\S.Ghiasvand\\source\\repos\\AutoService\\AutoService\\AutoService.csproj": {
+    "C:\\Users\\S.Ghiasvand\\Source\\Repos\\AutoService\\AutoService\\AutoService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\S.Ghiasvand\\source\\repos\\AutoService\\AutoService\\AutoService.csproj",
+        "projectUniqueName": "C:\\Users\\S.Ghiasvand\\Source\\Repos\\AutoService\\AutoService\\AutoService.csproj",
         "projectName": "AutoService",
-        "projectPath": "C:\\Users\\S.Ghiasvand\\source\\repos\\AutoService\\AutoService\\AutoService.csproj",
+        "projectPath": "C:\\Users\\S.Ghiasvand\\Source\\Repos\\AutoService\\AutoService\\AutoService.csproj",
         "packagesPath": "C:\\Users\\S.Ghiasvand\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\S.Ghiasvand\\source\\repos\\AutoService\\AutoService\\obj\\",
+        "outputPath": "C:\\Users\\S.Ghiasvand\\Source\\Repos\\AutoService\\AutoService\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

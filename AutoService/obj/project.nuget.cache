@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4KnMx5/aj++zXq0i0bk6v9yCuKYU2LNAcyFrTufrPb7mRbao3m4af+OFF9Rk/1WFqF9Xn7xz0ygkR4yf5TfLMA==",
+  "dgSpecHash": "VzTMU1mwYYxgagN/IPH6/9jmErERGcik7BdCM0mj3HnaFgXPZXxRs+xogPtVhVQnFyhQcnTKu0zElxYILr3C+w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\S.Ghiasvand\\source\\repos\\AutoService\\AutoService\\AutoService.csproj",
+  "projectFilePath": "C:\\Users\\S.Ghiasvand\\Source\\Repos\\AutoService\\AutoService\\AutoService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\S.Ghiasvand\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\S.Ghiasvand\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

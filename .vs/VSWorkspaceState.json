@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\AutoService"
+    "\\AutoService",
+    "\\AutoService\\wwwroot",
+    "\\AutoService\\wwwroot\\css"
   ],
-  "SelectedNode": "\\AutoService\\Program.cs",
+  "SelectedNode": "\\AutoService\\wwwroot\\css\\site.css",
   "PreviewInSolutionExplorer": false
 }

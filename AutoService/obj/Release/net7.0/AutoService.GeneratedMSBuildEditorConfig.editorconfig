@@ -9,11 +9,11 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AutoService
 build_property.RootNamespace = AutoService
-build_property.ProjectDir = C:\Users\S.Ghiasvand\source\repos\AutoService\AutoService\
+build_property.ProjectDir = C:\Users\S.Ghiasvand\Source\Repos\AutoService\AutoService\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = true
-build_property.MSBuildProjectDirectory = C:\Users\S.Ghiasvand\source\repos\AutoService\AutoService
+build_property.MSBuildProjectDirectory = C:\Users\S.Ghiasvand\Source\Repos\AutoService\AutoService
 build_property._RazorSourceGeneratorDebug = 
 
 [C:/Users/S.Ghiasvand/Source/Repos/AutoService/AutoService/Areas/Identity/Pages/Account/AccessDenied.cshtml]
@@ -186,6 +186,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/S.Ghiasvand/Source/Repos/AutoService/AutoService/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/S.Ghiasvand/Source/Repos/AutoService/AutoService/Pages/ServiceTypes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VydmljZVR5cGVzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/S.Ghiasvand/Source/Repos/AutoService/AutoService/Pages/Shared/_CookieConsentPartial.cshtml]

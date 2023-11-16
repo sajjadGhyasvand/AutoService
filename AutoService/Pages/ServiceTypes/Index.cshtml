@@ -16,5 +16,41 @@
             </a>
         </div>
     </div>
-
+    <br />
+</div>
+<div class="mt-3">
+    @if (Model.ServiceTypes.Count == 0)
+    {
+        <div class="alert alert-warning">
+            سرویسی حهت  نمایش تعریف نشده است از طریق
+            <a asp-page="Create" class="btn btn-link">
+                افزودن سرویس جدید
+            </a>
+            سرویس جدید ایجاد کنید.
+        </div>
+    }
+    else
+    {
+        <table class="table table-striped border">
+            <tr class="table-secondary">
+                <th>عنوان سرویس</th>
+                <th>قیمت سرویس</th>
+                <th></th>
+            </tr>
+            @foreach (var item in Model.ServiceTypes)
+            {
+                <tr>
+                    <td>
+                        @item.Name
+                    </td>
+                    <td>
+                        @item.Price
+                    </td>
+                    <td>
+                        
+                    </td>
+                </tr>
+            }
+        </table>
+    }
 </div>

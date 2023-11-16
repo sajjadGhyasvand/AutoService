@@ -46,8 +46,18 @@
                     <td>
                         @item.Price
                     </td>
-                    <td>
-                        
+                    <td style="width:150px">
+                        <div>
+                            <a class="btn  btn-outline-primary" asp-page="Edit" asp-route-Id="@item.Id">
+                                <i class="fas fa-edit fa-sm"></i>
+                            </a>
+                            <a class="btn  btn-outline-success" asp-page="Detail" asp-route-Id="@item.Id">
+                                <i class="fas fa-list-alt fa-sm"></i>
+                            </a>
+                            <a class="btn  btn-outline-danger" asp-page="Delete" asp-route-Id="@item.Id">
+                                <i class="fas fa-trash fa-sm"></i>
+                            </a>
+                        </div>
                     </td>
                 </tr>
             }

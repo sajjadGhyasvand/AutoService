@@ -1,14 +1,19 @@
 ﻿@page
-@model AutoService.Pages.ServiceTypes.CreateModel
+@model AutoService.Pages.ServiceTypes.EditModel
+
 @{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
 }
 
 <br />
 <h2 class="text-info">
-    افزودن سرویس جدید
+    <span>  ویرایش سرویس </span>
+    <span>@Model.ServiceType.Name</span>
 </h2>
 <hr />
 <form method="post">
+    <input type="hidden" asp-for="ServiceType.Id" />
     <div class="border px-3">
         <div class="form-group row my-2">
             <div class="col-2 text-end">
@@ -44,7 +49,7 @@
     </div>
 </form>
 
-@section Scripts
-    {
-    <partial name="_ValidationScriptsPartial" />
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }

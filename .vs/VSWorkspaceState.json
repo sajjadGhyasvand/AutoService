@@ -3,8 +3,7 @@
     "",
     "\\AutoService",
     "\\AutoService\\Pages",
-    "\\AutoService\\Pages\\ServiceTypes",
-    "\\AutoService\\wwwroot\\css"
+    "\\AutoService\\Pages\\ServiceTypes"
   ],
   "SelectedNode": "\\AutoService\\Pages\\ServiceTypes\\Index.cshtml",
   "PreviewInSolutionExplorer": false

@@ -2,9 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\AutoService",
-    "\\AutoService\\Pages",
-    "\\AutoService\\Pages\\ServiceTypes"
+    "\\AutoService\\Areas",
+    "\\AutoService\\Areas\\Identity",
+    "\\AutoService\\Areas\\Identity\\Pages",
+    "\\AutoService\\Areas\\Identity\\Pages\\Account"
   ],
-  "SelectedNode": "\\AutoService\\Pages\\ServiceTypes\\Index.cshtml",
+  "SelectedNode": "\\AutoService\\AutoService.sln",
   "PreviewInSolutionExplorer": false
 }

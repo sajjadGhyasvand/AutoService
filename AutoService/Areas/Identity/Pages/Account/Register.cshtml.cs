@@ -10,6 +10,7 @@ using System.Text;
 using System.Text.Encodings.Web;
 using System.Threading;
 using System.Threading.Tasks;
+using AutoService.Models;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -97,6 +98,10 @@ namespace AutoService.Areas.Identity.Pages.Account
             [Display(Name = " تکرار کلمه عبور")]
             [Compare("Password", ErrorMessage = "کلمه های عبور مغایرت دارند")]
             public string ConfirmPassword { get; set; }
+            [MaxLength(200)]
+            [Required(ErrorMessage = "لطفا {0} را وارد کنید. ")]
+            [Display(Name = "نام ")]
+            public string Name { get; set; }
         }
 
 
@@ -113,7 +118,7 @@ namespace AutoService.Areas.Identity.Pages.Account
             if (ModelState.IsValid)
             {
                 var user = CreateUser();
-
+                user.Name = Input.Name;
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
                 var result = await _userManager.CreateAsync(user, Input.Password);
@@ -154,11 +159,11 @@ namespace AutoService.Areas.Identity.Pages.Account
             return Page();
         }
 
-        private IdentityUser CreateUser()
+        private ApplicationUser CreateUser()
         {
             try
             {
-                return Activator.CreateInstance<IdentityUser>();
+                return Activator.CreateInstance<ApplicationUser>();
             }
             catch
             {

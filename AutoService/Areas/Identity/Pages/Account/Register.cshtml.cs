@@ -12,6 +12,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using AutoService.Data;
 using AutoService.Models;
+using AutoService.Utilities;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -139,7 +140,7 @@ namespace AutoService.Areas.Identity.Pages.Account
                       if (!await _rolemanager.RoleExistsAsync(SD.CustomerendUser))
                         await _rolemanager.CreateAsync(new IdentityRole(SD.CustomerendUser));
 
-                      await _userManager.AddToRoleAsync(user, SD.AdminEndUser);
+                      await _userManager.AddToRoleAsync(user, SD.CustomerendUser);
 
                     _logger.LogInformation("User created a new account with password.");
 

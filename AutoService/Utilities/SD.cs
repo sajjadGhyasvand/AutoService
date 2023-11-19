@@ -1,4 +1,4 @@
-﻿namespace AutoService.Models
+﻿namespace AutoService.Utilities
 {
     public static class SD
     {

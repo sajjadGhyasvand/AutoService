@@ -10,6 +10,7 @@ using System.Text;
 using System.Text.Encodings.Web;
 using System.Threading;
 using System.Threading.Tasks;
+using AutoService.Data;
 using AutoService.Models;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
@@ -30,13 +31,17 @@ namespace AutoService.Areas.Identity.Pages.Account
         private readonly IUserEmailStore<IdentityUser> _emailStore;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
+        private readonly RoleManager<IdentityRole> _rolemanager;
+        private readonly ApplicationDbContext _context;
 
         public RegisterModel(
             UserManager<IdentityUser> userManager,
             IUserStore<IdentityUser> userStore,
             SignInManager<IdentityUser> signInManager,
             ILogger<RegisterModel> logger,
-            IEmailSender emailSender)
+            IEmailSender emailSender,
+            RoleManager<IdentityRole> rolemanager,
+            ApplicationDbContext context = null)
         {
             _userManager = userManager;
             _userStore = userStore;
@@ -44,6 +49,8 @@ namespace AutoService.Areas.Identity.Pages.Account
             _signInManager = signInManager;
             _logger = logger;
             _emailSender = emailSender;
+            _rolemanager = rolemanager;
+            _context = context;
         }
 
         /// <summary>
@@ -125,6 +132,15 @@ namespace AutoService.Areas.Identity.Pages.Account
 
                 if (result.Succeeded)
                 {
+
+                    if (!await _rolemanager.RoleExistsAsync(SD.AdminEndUser))
+                        await _rolemanager.CreateAsync(new IdentityRole(SD.AdminEndUser));
+
+                      if (!await _rolemanager.RoleExistsAsync(SD.CustomerendUser))
+                        await _rolemanager.CreateAsync(new IdentityRole(SD.CustomerendUser));
+
+                      await _userManager.AddToRoleAsync(user, SD.AdminEndUser);
+
                     _logger.LogInformation("User created a new account with password.");
 
                     var userId = await _userManager.GetUserIdAsync(user);

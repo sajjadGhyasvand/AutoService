@@ -7,6 +7,6 @@
     "\\AutoService\\Areas\\Identity\\Pages",
     "\\AutoService\\Areas\\Identity\\Pages\\Account"
   ],
-  "SelectedNode": "\\AutoService\\AutoService.sln",
+  "SelectedNode": "\\AutoService\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
   "PreviewInSolutionExplorer": false
 }

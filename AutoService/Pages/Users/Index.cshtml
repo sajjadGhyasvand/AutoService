@@ -20,12 +20,12 @@
     <div class="border ">
         <br />
         <div>
-            @if (Model.UserList.Count > 0)
+            @if (@Model.UserListViewModel.ApplicationUsers.Count > 0)
             {
                 <table class="table table-striped border">
                     <tr class="table-secondary">
                         <th>
-                            @Html.DisplayNameFor(m=>m.UserList[0].Name)
+                            @Html.DisplayNameFor(m=>m.UserListViewModel.ApplicationUsers[0].Name)
                         </th>
                         <th>
                             شماره تلفن
@@ -35,7 +35,7 @@
                         </th>
                         <th></th>
                     </tr>
-                    @foreach (var user in Model.UserList)
+                    @foreach (var user in Model.UserListViewModel.ApplicationUsers)
                     {
                         <tr class="table-secondary">
                             <td>@user.Name</td>
@@ -54,6 +54,12 @@
                             </td>
                         </tr>
                     }
+                    <tr>
+                        <td colspan="5" class="text-end">
+                            <div page-model="@Model.UserListViewModel.">
+                            </div>
+                        </td>
+                    </tr>
                 </table>
             }
             else

@@ -5,8 +5,8 @@
     "\\AutoService\\Areas",
     "\\AutoService\\Areas\\Identity",
     "\\AutoService\\Areas\\Identity\\Pages",
-    "\\AutoService\\Areas\\Identity\\Pages\\Account"
+    "\\AutoService\\Areas\\Identity\\Pages\\Account",
+    "\\AutoService\\Models"
   ],
-  "SelectedNode": "\\AutoService\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
   "PreviewInSolutionExplorer": false
 }

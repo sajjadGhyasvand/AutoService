@@ -6,7 +6,9 @@
     "\\AutoService\\Areas\\Identity",
     "\\AutoService\\Areas\\Identity\\Pages",
     "\\AutoService\\Areas\\Identity\\Pages\\Account",
-    "\\AutoService\\Models"
+    "\\AutoService\\Models",
+    "\\AutoService\\TagHelpers"
   ],
+  "SelectedNode": "\\AutoService\\TagHelpers\\PageLinkTagHelper.cs",
   "PreviewInSolutionExplorer": false
 }

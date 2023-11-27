@@ -20,7 +20,7 @@ namespace AutoService.Pages.Users
         }
         [BindProperty]
         public UsersListViewModel UserListViewModel { get; set; }
-        public async Task<IActionResult> OnGet( int pageId = 1)
+        public async Task<IActionResult> OnGet( int pageId = 1,string searchName=null,string searchEmail = null)
         {
             UserListViewModel = new()
             {
@@ -28,11 +28,19 @@ namespace AutoService.Pages.Users
             };
             StringBuilder param = new();
             param.Append("/Users?productPage=:");
+            param.Append("$searchName=");
+            if (searchName != null)
+                param.Append(searchName);
+            param.Append("$searchEmail=");
+            if (searchName != null)
+                param.Append(searchEmail);
+            if (searchEmail!=null || searchEmail!=null)
+                UserListViewModel.ApplicationUsers = _context.ApplicationUsers.Where(u=>u.Name.Contains(searchName) || u.Email.Contains(searchEmail)).ToList();
             var count = UserListViewModel.ApplicationUsers.Count;
             UserListViewModel.PaginingInfo = new()
             {
                 CurrentPage = pageId,
-                ItemPerPage = 2,
+                ItemPerPage = SD.PagingUserCount,
                 TotalItems = count,
                 UrlParam = param.ToString(),
 

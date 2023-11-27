@@ -20,6 +20,26 @@
     <div class="border ">
         <br />
         <div>
+            <div class="border">
+                <div style="height:60px" class="container border border-secondary">
+                    <div class="col-11">
+                        <div class="row" style="padding-top:10px">
+                            <div class="col-4">
+                                <input type="text" name="searchName" placeholder="Name" />
+                            </div>
+                            <div class="col-4">
+                                <input type="email" name="searchEmail" placeholder="Email" />
+                            </div>
+                            <div class="col-1">
+                                    <button type="submit" name="submit" value="جستجو" class="btn btn-info form-control">
+                                        جستجو
+                                    </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
             @if (@Model.UserListViewModel.ApplicationUsers.Count > 0)
             {
                 <table class="table table-striped border">
@@ -31,7 +51,7 @@
                             شماره تلفن
                         </th>
                         <th>
-                           ایمیل
+                            ایمیل
                         </th>
                         <th></th>
                     </tr>
@@ -57,11 +77,11 @@
                     <tr>
                         <td colspan="5" class="text-end">
                             <div page-model="@Model.UserListViewModel.PaginingInfo"
-                            page-action="Indecx"
-                            page-class="btn border"
-                            page-class-selected="btn btn-info active"
-                            page-class-normal ="btn bt-light"
-                            class="btn-group">
+                                 page-action="Indecx"
+                                 page-class="btn border"
+                                 page-class-selected="btn btn-info active"
+                                 page-class-normal="btn bt-light"
+                                 class="btn-group">
                             </div>
                         </td>
                     </tr>

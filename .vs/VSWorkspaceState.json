@@ -5,10 +5,11 @@
     "\\AutoService\\Areas",
     "\\AutoService\\Areas\\Identity",
     "\\AutoService\\Areas\\Identity\\Pages",
-    "\\AutoService\\Areas\\Identity\\Pages\\Account",
     "\\AutoService\\Models",
+    "\\AutoService\\Pages",
+    "\\AutoService\\Pages\\Users",
     "\\AutoService\\TagHelpers"
   ],
-  "SelectedNode": "\\AutoService\\TagHelpers\\PageLinkTagHelper.cs",
+  "SelectedNode": "\\AutoService\\Pages\\Users\\Index.cshtml.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -7,9 +7,12 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using AutoService.Data;
 using AutoService.Models;
+using AutoService.Utilities;
+using Microsoft.AspNetCore.Authorization;
 
 namespace AutoService.Pages.ServiceTypes
 {
+    [Authorize(Roles = SD.AdminEndUser)]
     public class DeleteModel : PageModel
     {
         private readonly AutoService.Data.ApplicationDbContext _context;

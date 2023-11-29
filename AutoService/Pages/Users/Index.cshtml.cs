@@ -2,6 +2,7 @@ using AutoService.Data;
 using AutoService.Models;
 using AutoService.Models.ViewModel;
 using AutoService.Utilities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
@@ -10,6 +11,7 @@ using System.Text;
 
 namespace AutoService.Pages.Users
 {
+    [Authorize(Roles = SD.AdminEndUser)]
     public class IndexModel : PageModel
     {
         private readonly ApplicationDbContext _context;

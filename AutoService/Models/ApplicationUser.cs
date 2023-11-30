@@ -26,7 +26,7 @@ namespace AutoService.Models
             get { return base.PhoneNumber; }
             set { base.PhoneNumber = value; }
         }
-
+        public virtual List<Car> Cars { get; set; }
 
     }
 }

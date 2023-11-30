@@ -10,6 +10,6 @@
     "\\AutoService\\Pages\\Users",
     "\\AutoService\\TagHelpers"
   ],
-  "SelectedNode": "\\AutoService\\AutoService.sln",
+  "SelectedNode": "\\AutoService\\Pages\\Users\\Delete.cshtml.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -5,6 +5,18 @@
       "PackagePath": "staticwebassets\\AutoService.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\S.Ghiasvand\\Source\\Repos\\AutoService\\AutoService\\wwwroot\\CarImages\\5ffdcfae-f5f7-409c-be42-bea3d3c7c764.jpg",
+      "PackagePath": "staticwebassets\\CarImages\\5ffdcfae-f5f7-409c-be42-bea3d3c7c764.jpg"
+    },
+    {
+      "Id": "C:\\Users\\S.Ghiasvand\\Source\\Repos\\AutoService\\AutoService\\wwwroot\\CarImages\\91fb1748-8304-48ad-812c-4c674fd68c1c.jpg",
+      "PackagePath": "staticwebassets\\CarImages\\91fb1748-8304-48ad-812c-4c674fd68c1c.jpg"
+    },
+    {
+      "Id": "C:\\Users\\S.Ghiasvand\\Source\\Repos\\AutoService\\AutoService\\wwwroot\\CarImages\\c82ccf25-6ac4-4362-a9d3-6887f6ecef8a.jpg",
+      "PackagePath": "staticwebassets\\CarImages\\c82ccf25-6ac4-4362-a9d3-6887f6ecef8a.jpg"
+    },
+    {
       "Id": "C:\\Users\\S.Ghiasvand\\Source\\Repos\\AutoService\\AutoService\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

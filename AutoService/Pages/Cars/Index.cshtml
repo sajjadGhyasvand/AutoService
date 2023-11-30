@@ -84,7 +84,7 @@
                         {
                         <tr>
                             <td>
-                                <img src="/CarImage/@car.ImageName" />
+                                <img style="width:100px; height:100px;" src="/CarImages/@car.ImageName" />
                             </td>
                             <td>@car.Name</td>
                             <td>@car.Model</td>
@@ -100,10 +100,10 @@
                                 </td>
                                 }
                             <td>
-                                <a class="btn btn-outline-primary" asp-page="/Services/Edit" asp-route-carId="@car.Id">
+                                <a class="btn btn-outline-primary" asp-page="/Cars/Edit" asp-route-carId="@car.Id">
                                     <i class="fas fa-edit"></i>
                                 </a>
-                                <a class="btn btn-outline-success" asp-page="/Services/Delete" asp-route-carId="@car.Id">
+                                <a class="btn btn-outline-success" asp-page="/Cars/Delete" asp-route-carId="@car.Id">
                                     <i class="fas fa-trash"></i>
                                 </a>
                             </td>

@@ -11,6 +11,6 @@
     "\\AutoService\\Pages\\Users",
     "\\AutoService\\TagHelpers"
   ],
-  "SelectedNode": "\\AutoService\\Pages\\Cars\\Index.cshtml.cs",
+  "SelectedNode": "\\AutoService\\Pages\\Cars\\Create.cshtml",
   "PreviewInSolutionExplorer": false
 }

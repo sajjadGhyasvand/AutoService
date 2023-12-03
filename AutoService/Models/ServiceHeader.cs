@@ -7,6 +7,7 @@ namespace AutoService.Models
     public class ServiceHeader
     {
         public int Id { get; set; }
+        [Display(Name="کیلومتر")]
         public double KiloMetter { get; set; }
         [Required]
         public double TotalPrice { get; set; }

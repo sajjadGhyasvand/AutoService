@@ -36,5 +36,58 @@ namespace AutoService.Pages.Services
             }
             return Page();
         }
+
+        public async Task<IActionResult> OnPost()
+        {
+                carServiceVM.ServiceHeader.DateAdded = DateTime.Now;
+                carServiceVM.ServiceShopping = _context.ServicesShopingCarts.Include(c => c.ServiceType)
+                    .Where(c => c.CarId == carServiceVM.Car.Id).ToList();
+                foreach (var shop in carServiceVM.ServiceShopping)
+                {
+                    carServiceVM.ServiceHeader.TotalPrice += shop.ServiceType.Price;
+                }
+
+                carServiceVM.ServiceHeader.CarId = carServiceVM.Car.Id;
+                _context.ServiceHeaders.Add(carServiceVM.ServiceHeader);
+                await _context.SaveChangesAsync();
+
+                foreach (var shop in carServiceVM.ServiceShopping)
+                {
+                    ServiceDetails details = new ServiceDetails()
+                    {
+                        ServiceHeaderId = carServiceVM.ServiceHeader.Id,
+                        ServiceName = shop.ServiceType.Name,
+                        ServicePrice = shop.ServiceType.Price,
+                        ServiceTypeId = shop.ServiceTypeId
+                    };
+                    _context.ServiceDetails.Add(details);
+                }
+                _context.ServicesShopingCarts.RemoveRange(carServiceVM.ServiceShopping);
+                await _context.SaveChangesAsync();
+                return RedirectToPage("/Cars/Index", new { userId = carServiceVM.Car.UserId });
+
+            return Page();
+        }
+
+        public async Task<IActionResult> OnPostAddToCart()
+        {
+            ServicesShopingCart shopping = new ServicesShopingCart()
+            {
+                CarId = carServiceVM.Car.Id,
+                ServiceTypeId = carServiceVM.ServiceDetails.ServiceTypeId
+            };
+            _context.ServicesShopingCarts.Add(shopping);
+            await _context.SaveChangesAsync();
+            return RedirectToPage("Create", new { carId = carServiceVM.Car.Id });
+        }
+
+        public async Task<IActionResult> OnPostRemoveFromCart(int serviceTypeId)
+        {
+            ServicesShopingCart shopping = _context.ServicesShopingCarts
+                .First(u => u.CarId == carServiceVM.Car.Id && u.ServiceTypeId == serviceTypeId);
+            _context.Remove(shopping);
+            await _context.SaveChangesAsync();
+            return RedirectToPage("Create", new { carId = carServiceVM.Car.Id });
+        }
     }
 }
